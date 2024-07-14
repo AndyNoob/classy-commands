@@ -1,6 +1,6 @@
-package io.github.andynoob.classy.core;
+package comfortable_andy.classy.core;
 
-import io.github.andynoob.classy.core.routing.Route;
+import comfortable_andy.classy.core.routing.Route;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Getter;
@@ -14,17 +14,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public abstract class ClassyCommand {
+public abstract class ClassyEndpoint<S> {
 
-    @NotNull
-    protected final String name;
     @NotNull
     @Getter(AccessLevel.PACKAGE)
     List<Route> routes = new ArrayList<>();
 
+    protected abstract boolean execute(S sender);
+
     @Retention(RetentionPolicy.RUNTIME)
     @Target({ElementType.TYPE})
     public @interface CommandInfo {
+        String value();
         String[] aliases() default {};
         String description();
     }

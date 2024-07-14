@@ -175,3 +175,6 @@ bin/
 .project
 .settings/
 /.gtm/
+
+# Ignore Gradle build output directory
+build

@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+dependencies {
+    test.useJUnitPlatform()
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation "org.jetbrains:annotations:23.0.0"
+    compileOnly "org.projectlombok:lombok:1.18.34"
+}
+
+group = 'comfortable_andy'
+version = '1.0.0'
+description = 'classy-core'
+java.sourceCompatibility = JavaVersion.VERSION_16
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}

@@ -1,6 +1,6 @@
-package io.github.andynoob.classy.core.routing;
+package comfortable_andy.classy.core.routing;
 
-import io.github.andynoob.classy.core.util.Pair;
+import comfortable_andy.classy.core.util.Pair;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

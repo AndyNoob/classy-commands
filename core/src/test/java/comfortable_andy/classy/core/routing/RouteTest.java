@@ -1,4 +1,4 @@
-package io.github.andynoob.classy.core.routing;
+package comfortable_andy.classy.core.routing;
 
 import org.junit.jupiter.api.Test;
 
